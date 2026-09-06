@@ -1,4 +1,4 @@
-
+namespace SistemaBibliotecario.Models;
 
 public record Prestamo
 {

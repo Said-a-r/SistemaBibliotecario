@@ -1,4 +1,4 @@
-
+namespace SistemaBibliotecario.Models;
 public class Usuario
 {
     public int Id {set;get;}

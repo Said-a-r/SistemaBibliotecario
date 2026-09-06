@@ -1,3 +1,5 @@
+namespace SistemaBibliotecario.Models;
+
 public class Libro
 {
     public int Codigo {get;set;}
