@@ -1,6 +1,8 @@
+using SistemaBibliotecario.Interfaces;
+
 namespace SistemaBibliotecario.Models;
 
-public class Libro
+public class Libro : IPrestable
 {
     public int Codigo {get;set;}
     public string Titulo {get;set;}
@@ -15,6 +17,16 @@ public class Libro
         Autor=autor;
         Disponible=true;
         Categoria=categoria;
+    }
+
+    public void Prestar()
+    {
+        Disponible=false;
+    }
+
+    public void Devolver()
+    {
+        Disponible=true;
     }
 
 }
