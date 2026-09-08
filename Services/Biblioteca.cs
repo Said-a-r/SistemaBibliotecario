@@ -30,7 +30,7 @@ public class Biblioteca
             .FirstOrDefault(l => l.Titulo == libro.Titulo && l.Autor == libro.Autor );
         
 
-        if (libroAuxi != null)
+        if (libroAuxi == null)
         {
             repositorioLibros.Agregar(libro);
             
@@ -221,9 +221,12 @@ public class Biblioteca
                 var libro = BuscarLibro(prestamo.CodigoLibro);
                 var usuario = BuscarUsuario(prestamo.IdUsuario);
                 if (libro != null && usuario != null){
+                    
                     Console.WriteLine($"Libro {libro.Titulo}");
                     Console.WriteLine($"Usuario {usuario.Nombre}");
                     Console.WriteLine($"Fecha de préstamo {prestamo.FechaPrestamo}");
+                    Console.WriteLine("wwwwwwwwwwwwwww");
+
                 }
             }
         }
